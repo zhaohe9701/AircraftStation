@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'connectWindowbCFZfu.ui'
+## Form generated from reading UI file 'connectWindowIJYgaC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -26,15 +26,23 @@ class Ui_ConnectWindow(object):
         if not ConnectWindow.objectName():
             ConnectWindow.setObjectName(u"ConnectWindow")
         ConnectWindow.setWindowModality(Qt.NonModal)
-        ConnectWindow.resize(739, 646)
+        ConnectWindow.resize(498, 510)
         ConnectWindow.setStyleSheet(u"QWidget{\n"
 "	background-color: rgb(30, 30, 30);\n"
 "}")
-        self.formLayout = QFormLayout(ConnectWindow)
-        self.formLayout.setObjectName(u"formLayout")
-        self.verticalLayout = QVBoxLayout()
+        self.horizontalLayout_4 = QHBoxLayout(ConnectWindow)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.frame = QFrame(ConnectWindow)
+        self.frame.setObjectName(u"frame")
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy)
+        self.frame.setMaximumSize(QSize(500, 16777215))
+        self.verticalLayout = QVBoxLayout(self.frame)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.label = QLabel(ConnectWindow)
+        self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         self.label.setAutoFillBackground(False)
         self.label.setStyleSheet(u"QLabel\n"
@@ -46,11 +54,16 @@ class Ui_ConnectWindow(object):
 
         self.verticalLayout.addWidget(self.label)
 
-        self.connectWaySelectBox = QComboBox(ConnectWindow)
+        self.connectWaySelectBox = QComboBox(self.frame)
         self.connectWaySelectBox.addItem("")
         self.connectWaySelectBox.addItem("")
         self.connectWaySelectBox.setObjectName(u"connectWaySelectBox")
-        self.connectWaySelectBox.setMinimumSize(QSize(300, 0))
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.connectWaySelectBox.sizePolicy().hasHeightForWidth())
+        self.connectWaySelectBox.setSizePolicy(sizePolicy1)
+        self.connectWaySelectBox.setMinimumSize(QSize(0, 0))
         self.connectWaySelectBox.setMaximumSize(QSize(300, 16777215))
         self.connectWaySelectBox.setStyleSheet(u"QComboBox\n"
 "{\n"
@@ -119,7 +132,7 @@ class Ui_ConnectWindow(object):
 
         self.verticalLayout.addWidget(self.connectWaySelectBox)
 
-        self.connectSetWidget = QStackedWidget(ConnectWindow)
+        self.connectSetWidget = QStackedWidget(self.frame)
         self.connectSetWidget.setObjectName(u"connectSetWidget")
         self.connectSetWidget.setStyleSheet(u"")
         self.connectSetWidget.setFrameShadow(QFrame.Plain)
@@ -135,11 +148,11 @@ class Ui_ConnectWindow(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.label_5 = QLabel(self.uartPage)
         self.label_5.setObjectName(u"label_5")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
-        self.label_5.setSizePolicy(sizePolicy)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
+        self.label_5.setSizePolicy(sizePolicy2)
         self.label_5.setAutoFillBackground(False)
         self.label_5.setStyleSheet(u"QLabel\n"
 "{\n"
@@ -182,7 +195,7 @@ class Ui_ConnectWindow(object):
 
         self.portNumBox = QComboBox(self.uartPage)
         self.portNumBox.setObjectName(u"portNumBox")
-        self.portNumBox.setMinimumSize(QSize(300, 0))
+        self.portNumBox.setMinimumSize(QSize(0, 0))
         self.portNumBox.setMaximumSize(QSize(16777215, 16777215))
         self.portNumBox.setStyleSheet(u"QComboBox\n"
 "{\n"
@@ -253,8 +266,8 @@ class Ui_ConnectWindow(object):
 
         self.label_3 = QLabel(self.uartPage)
         self.label_3.setObjectName(u"label_3")
-        sizePolicy.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
-        self.label_3.setSizePolicy(sizePolicy)
+        sizePolicy2.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
+        self.label_3.setSizePolicy(sizePolicy2)
         self.label_3.setAutoFillBackground(False)
         self.label_3.setStyleSheet(u"QLabel\n"
 "{\n"
@@ -271,12 +284,12 @@ class Ui_ConnectWindow(object):
         self.baudRateBox.addItem("")
         self.baudRateBox.addItem("")
         self.baudRateBox.setObjectName(u"baudRateBox")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.baudRateBox.sizePolicy().hasHeightForWidth())
-        self.baudRateBox.setSizePolicy(sizePolicy1)
-        self.baudRateBox.setMinimumSize(QSize(300, 0))
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.baudRateBox.sizePolicy().hasHeightForWidth())
+        self.baudRateBox.setSizePolicy(sizePolicy3)
+        self.baudRateBox.setMinimumSize(QSize(0, 0))
         self.baudRateBox.setMaximumSize(QSize(16777215, 16777215))
         self.baudRateBox.setStyleSheet(u"QComboBox\n"
 "{\n"
@@ -351,8 +364,8 @@ class Ui_ConnectWindow(object):
 
         self.label_4 = QLabel(self.uartPage)
         self.label_4.setObjectName(u"label_4")
-        sizePolicy.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
-        self.label_4.setSizePolicy(sizePolicy)
+        sizePolicy2.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy2)
         self.label_4.setAutoFillBackground(False)
         self.label_4.setStyleSheet(u"QLabel\n"
 "{\n"
@@ -440,8 +453,8 @@ class Ui_ConnectWindow(object):
 
         self.label_6 = QLabel(self.uartPage)
         self.label_6.setObjectName(u"label_6")
-        sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
-        self.label_6.setSizePolicy(sizePolicy)
+        sizePolicy2.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
+        self.label_6.setSizePolicy(sizePolicy2)
         self.label_6.setAutoFillBackground(False)
         self.label_6.setStyleSheet(u"QLabel\n"
 "{\n"
@@ -528,8 +541,8 @@ class Ui_ConnectWindow(object):
 
         self.label_7 = QLabel(self.uartPage)
         self.label_7.setObjectName(u"label_7")
-        sizePolicy.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
-        self.label_7.setSizePolicy(sizePolicy)
+        sizePolicy2.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
+        self.label_7.setSizePolicy(sizePolicy2)
         self.label_7.setAutoFillBackground(False)
         self.label_7.setStyleSheet(u"QLabel\n"
 "{\n"
@@ -545,7 +558,7 @@ class Ui_ConnectWindow(object):
         self.stopLenBox.addItem("")
         self.stopLenBox.addItem("")
         self.stopLenBox.setObjectName(u"stopLenBox")
-        self.stopLenBox.setMinimumSize(QSize(300, 0))
+        self.stopLenBox.setMinimumSize(QSize(0, 0))
         self.stopLenBox.setMaximumSize(QSize(16777215, 16777215))
         self.stopLenBox.setStyleSheet(u"QComboBox\n"
 "{\n"
@@ -614,10 +627,6 @@ class Ui_ConnectWindow(object):
 
         self.verticalLayout_2.addWidget(self.stopLenBox)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_2.addItem(self.verticalSpacer)
-
 
         self.formLayout_2.setLayout(0, QFormLayout.FieldRole, self.verticalLayout_2)
 
@@ -630,8 +639,11 @@ class Ui_ConnectWindow(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.label_8 = QLabel(self.wlanPage)
         self.label_8.setObjectName(u"label_8")
-        sizePolicy.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
-        self.label_8.setSizePolicy(sizePolicy)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
+        self.label_8.setSizePolicy(sizePolicy4)
         self.label_8.setStyleSheet(u"QLabel\n"
 "{\n"
 "	color:rgb(255,255,255);\n"
@@ -643,11 +655,8 @@ class Ui_ConnectWindow(object):
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.lineEdit = QLineEdit(self.wlanPage)
         self.lineEdit.setObjectName(u"lineEdit")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
-        self.lineEdit.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
+        self.lineEdit.setSizePolicy(sizePolicy1)
         self.lineEdit.setStyleSheet(u"QWidget{\n"
 "	border-radius: 6px;\n"
 "	background-color:rgba(60,60,60,200);\n"
@@ -659,8 +668,8 @@ class Ui_ConnectWindow(object):
 
         self.lineEdit_2 = QLineEdit(self.wlanPage)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
-        sizePolicy2.setHeightForWidth(self.lineEdit_2.sizePolicy().hasHeightForWidth())
-        self.lineEdit_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.lineEdit_2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_2.setSizePolicy(sizePolicy1)
         self.lineEdit_2.setStyleSheet(u"QWidget{\n"
 "	border-radius: 6px;\n"
 "	background-color:rgba(60,60,60,200);\n"
@@ -672,8 +681,8 @@ class Ui_ConnectWindow(object):
 
         self.lineEdit_3 = QLineEdit(self.wlanPage)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
-        sizePolicy2.setHeightForWidth(self.lineEdit_3.sizePolicy().hasHeightForWidth())
-        self.lineEdit_3.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.lineEdit_3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_3.setSizePolicy(sizePolicy1)
         self.lineEdit_3.setStyleSheet(u"QWidget{\n"
 "	border-radius: 6px;\n"
 "	background-color:rgba(60,60,60,200);\n"
@@ -685,8 +694,8 @@ class Ui_ConnectWindow(object):
 
         self.lineEdit_4 = QLineEdit(self.wlanPage)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
-        sizePolicy2.setHeightForWidth(self.lineEdit_4.sizePolicy().hasHeightForWidth())
-        self.lineEdit_4.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.lineEdit_4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_4.setSizePolicy(sizePolicy1)
         self.lineEdit_4.setStyleSheet(u"QWidget{\n"
 "	border-radius: 6px;\n"
 "	background-color:rgba(60,60,60,200);\n"
@@ -701,8 +710,8 @@ class Ui_ConnectWindow(object):
 
         self.label_10 = QLabel(self.wlanPage)
         self.label_10.setObjectName(u"label_10")
-        sizePolicy.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
-        self.label_10.setSizePolicy(sizePolicy)
+        sizePolicy2.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
+        self.label_10.setSizePolicy(sizePolicy2)
         self.label_10.setStyleSheet(u"QLabel\n"
 "{\n"
 "	color:rgb(255,255,255);\n"
@@ -712,8 +721,8 @@ class Ui_ConnectWindow(object):
 
         self.lineEdit_5 = QLineEdit(self.wlanPage)
         self.lineEdit_5.setObjectName(u"lineEdit_5")
-        sizePolicy2.setHeightForWidth(self.lineEdit_5.sizePolicy().hasHeightForWidth())
-        self.lineEdit_5.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.lineEdit_5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_5.setSizePolicy(sizePolicy1)
         self.lineEdit_5.setStyleSheet(u"QWidget{\n"
 "	border-radius: 6px;\n"
 "	background-color:rgba(60,60,60,200);\n"
@@ -734,11 +743,15 @@ class Ui_ConnectWindow(object):
 
         self.verticalLayout.addWidget(self.connectSetWidget)
 
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.formLayout.setLayout(0, QFormLayout.FieldRole, self.verticalLayout)
+        self.verticalLayout.addItem(self.verticalSpacer)
 
-        self.connectPushButton = QPushButton(ConnectWindow)
+        self.connectPushButton = QPushButton(self.frame)
         self.connectPushButton.setObjectName(u"connectPushButton")
+        sizePolicy1.setHeightForWidth(self.connectPushButton.sizePolicy().hasHeightForWidth())
+        self.connectPushButton.setSizePolicy(sizePolicy1)
+        self.connectPushButton.setMinimumSize(QSize(0, 50))
         self.connectPushButton.setStyleSheet(u"QPushButton\n"
 "{\n"
 "    color:rgb(255,255,255); /*\u6587\u5b57\u989c\u8272*/\n"
@@ -771,16 +784,31 @@ class Ui_ConnectWindow(object):
         self.connectPushButton.setAutoRepeat(False)
         self.connectPushButton.setAutoExclusive(False)
 
-        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.connectPushButton)
+        self.verticalLayout.addWidget(self.connectPushButton)
 
         self.verticalSpacer_3 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
-        self.formLayout.setItem(2, QFormLayout.FieldRole, self.verticalSpacer_3)
+        self.verticalLayout.addItem(self.verticalSpacer_3)
 
+
+        self.horizontalLayout_4.addWidget(self.frame)
+
+        QWidget.setTabOrder(self.connectWaySelectBox, self.refreshButton)
+        QWidget.setTabOrder(self.refreshButton, self.portNumBox)
+        QWidget.setTabOrder(self.portNumBox, self.baudRateBox)
+        QWidget.setTabOrder(self.baudRateBox, self.dataLenBox)
+        QWidget.setTabOrder(self.dataLenBox, self.checkPattermBox)
+        QWidget.setTabOrder(self.checkPattermBox, self.stopLenBox)
+        QWidget.setTabOrder(self.stopLenBox, self.lineEdit)
+        QWidget.setTabOrder(self.lineEdit, self.lineEdit_2)
+        QWidget.setTabOrder(self.lineEdit_2, self.lineEdit_3)
+        QWidget.setTabOrder(self.lineEdit_3, self.lineEdit_4)
+        QWidget.setTabOrder(self.lineEdit_4, self.lineEdit_5)
+        QWidget.setTabOrder(self.lineEdit_5, self.connectPushButton)
 
         self.retranslateUi(ConnectWindow)
 
-        self.connectSetWidget.setCurrentIndex(0)
+        self.connectSetWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(ConnectWindow)

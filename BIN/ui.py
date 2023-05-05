@@ -1,3 +1,5 @@
+from PySide6 import QtWidgets
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QWidget
 from UI.mainWindow import Ui_MainWindow
 from UI.connectWindow import Ui_ConnectWindow
@@ -40,11 +42,11 @@ class FsConnectWindow(QWidget):
 
     def connectByUart(self):
         res, errStr = uart.openPort(port=self.ui.portNumBox.currentText(),
-                               baudRate=self.ui.baudRateBox.currentText(),
-                               byteSize=self.ui.dataLenBox.currentText(),
-                               parity=self.ui.checkPattermBox.currentText(),
-                               stopBits=self.ui.stopLenBox.currentText()
-                               )
+                                    baudRate=self.ui.baudRateBox.currentText(),
+                                    byteSize=self.ui.dataLenBox.currentText(),
+                                    parity=self.ui.checkPattermBox.currentText(),
+                                    stopBits=self.ui.stopLenBox.currentText()
+                                    )
         print(errStr)
         if res:
             self.ui.connectPushButton.setText("断开")
@@ -53,12 +55,21 @@ class FsConnectWindow(QWidget):
         uart.closePort()
         self.ui.connectPushButton.setText("连接")
 
+
 class FsTerminalWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.ui = Ui_TerminalWindow()
         self.ui.setupUi(self)
+        self.ui.outputText.document().setMaximumBlockCount(1000)
+        self.ui.inputText.keyPressEvent = self.childKeyPressEvent
 
+    def childKeyPressEvent(self, event):
+
+        if event.key() == Qt.Key_Return and self.ui.inputText.hasFocus() and self.ui.enterSendBox.isChecked():
+            self.ui.sendButton.click()
+            return
+        QtWidgets.QTextEdit.keyPressEvent(self.ui.inputText, event)
 
 
 
@@ -86,6 +97,7 @@ class FsMainWindow(QMainWindow):
         self.ui.MainStackedWidget.addWidget(self.connectWin)
         self.ui.MainStackedWidget.addWidget(self.positionWin)
         self.ui.MainStackedWidget.addWidget(self.terminalWin)
+
     def showConnectWin(self):
         self.ui.MainStackedWidget.setCurrentIndex(1)
 

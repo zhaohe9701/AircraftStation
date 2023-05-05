@@ -11,9 +11,7 @@ class Uart:
     def __init__(self):
         self.portList = []
         self.port = None
-        self.receiveThread = None
         self.receiveBuf = "".encode('utf-8')
-        self.lock = threading.Lock()
 
     def findPort(self):
         self.portList = list(serial.tools.list_ports.comports())
@@ -48,9 +46,8 @@ class Uart:
         else:
             stopBits = serial.STOPBITS_TWO
 
-        self.port = serial.Serial(port=port, baudrate=int(baudRate), bytesize=byteSize, parity=parity, stopbits=stopBits)
+        self.port = serial.Serial(port=port, baudrate=int(baudRate), bytesize=byteSize, parity=parity, stopbits=stopBits,timeout=0)
         if self.port.isOpen():
-            self.receiveThread = Thread(target=self.receiveLoop)
             return True, "串口打开成功."
         else:
             return False, "串口打开失败."
@@ -63,20 +60,7 @@ class Uart:
     def transmit(self, data):
         if self.port is None:
             return False
-        self.port.write(data.encode('utf-8'))
-
-    def receiveLoop(self):
-
-        while self.port is not None and self.port.isOpen:
-            self.lock.acquire()
-            self.receiveBuf += self.port.readline()
-            self.lock.release()
-
-    def receive(self):
-        if not self.lock.acquire(False):
-            return "".encode('utf-8')
-        else:
-            return deepcopy(self.receiveBuf)
+        self.port.write(data)
 
 
 uart = Uart()

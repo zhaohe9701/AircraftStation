@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'treminalWindowCnbEDK.ui'
+## Form generated from reading UI file 'treminalWindowagJeCB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QFormLayout, QHBoxLayout,
-    QPushButton, QSizePolicy, QSpacerItem, QTextBrowser,
-    QTextEdit, QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QSpacerItem, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_TerminalWindow(object):
     def setupUi(self, TerminalWindow):
@@ -32,46 +32,48 @@ class Ui_TerminalWindow(object):
         self.formLayout.setContentsMargins(-1, 15, -1, -1)
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.outputText = QTextBrowser(TerminalWindow)
+        self.outputText = QTextEdit(TerminalWindow)
         self.outputText.setObjectName(u"outputText")
-        self.outputText.setStyleSheet(u"QTextBrowser\n"
+        self.outputText.setStyleSheet(u"QTextEdit\n"
 "{\n"
+"	font-family:Consolas;\n"
 "	color:rgb(255,255,255);\n"
 "	background-color:rgb(51,51,51);\n"
 "	border:0px ;\n"
 "}")
+        self.outputText.setReadOnly(True)
 
         self.verticalLayout.addWidget(self.outputText)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(10, -1, -1, -1)
-        self.checkBox_3 = QCheckBox(TerminalWindow)
-        self.checkBox_3.setObjectName(u"checkBox_3")
-        self.checkBox_3.setStyleSheet(u"QCheckBox\n"
+        self.addHeadBox = QCheckBox(TerminalWindow)
+        self.addHeadBox.setObjectName(u"addHeadBox")
+        self.addHeadBox.setStyleSheet(u"QCheckBox\n"
 "{\n"
 "	color:rgb(255,255,255);\n"
 "}")
 
-        self.horizontalLayout.addWidget(self.checkBox_3)
+        self.horizontalLayout.addWidget(self.addHeadBox)
 
-        self.checkBox_2 = QCheckBox(TerminalWindow)
-        self.checkBox_2.setObjectName(u"checkBox_2")
-        self.checkBox_2.setStyleSheet(u"QCheckBox\n"
+        self.addEnterBox = QCheckBox(TerminalWindow)
+        self.addEnterBox.setObjectName(u"addEnterBox")
+        self.addEnterBox.setStyleSheet(u"QCheckBox\n"
 "{\n"
 "	color:rgb(255,255,255);\n"
 "}")
 
-        self.horizontalLayout.addWidget(self.checkBox_2)
+        self.horizontalLayout.addWidget(self.addEnterBox)
 
-        self.checkBox = QCheckBox(TerminalWindow)
-        self.checkBox.setObjectName(u"checkBox")
-        self.checkBox.setStyleSheet(u"QCheckBox\n"
+        self.enterSendBox = QCheckBox(TerminalWindow)
+        self.enterSendBox.setObjectName(u"enterSendBox")
+        self.enterSendBox.setStyleSheet(u"QCheckBox\n"
 "{\n"
 "	color:rgb(255,255,255);\n"
 "}")
 
-        self.horizontalLayout.addWidget(self.checkBox)
+        self.horizontalLayout.addWidget(self.enterSendBox)
 
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -85,6 +87,7 @@ class Ui_TerminalWindow(object):
         self.inputText.setMaximumSize(QSize(16777215, 250))
         self.inputText.setStyleSheet(u"QTextEdit\n"
 "{\n"
+"	font-family:Consolas;\n"
 "	color:rgb(255,255,255);\n"
 "	background-color:rgb(51,51,51);\n"
 "	border:0px ;\n"
@@ -139,9 +142,9 @@ class Ui_TerminalWindow(object):
 
     def retranslateUi(self, TerminalWindow):
         TerminalWindow.setWindowTitle(QCoreApplication.translate("TerminalWindow", u"Form", None))
-        self.checkBox_3.setText(QCoreApplication.translate("TerminalWindow", u"\u547d\u4ee4\u5934", None))
-        self.checkBox_2.setText(QCoreApplication.translate("TerminalWindow", u"\u56de\u8f66\u7b26", None))
-        self.checkBox.setText(QCoreApplication.translate("TerminalWindow", u"\u56de\u8f66\u53d1\u9001", None))
+        self.addHeadBox.setText(QCoreApplication.translate("TerminalWindow", u"\u547d\u4ee4\u5934", None))
+        self.addEnterBox.setText(QCoreApplication.translate("TerminalWindow", u"\u56de\u8f66\u7b26", None))
+        self.enterSendBox.setText(QCoreApplication.translate("TerminalWindow", u"\u56de\u8f66\u53d1\u9001", None))
         self.sendButton.setText(QCoreApplication.translate("TerminalWindow", u"\u53d1\u9001", None))
     # retranslateUi
 
